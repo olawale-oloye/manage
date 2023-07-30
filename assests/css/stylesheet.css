@@ -116,6 +116,10 @@ nav a:active {
   color: var(--white);
 }
 
+#toggler {
+  display: none;
+}
+
 /* Sections embedded in Article  */
 
 article {
@@ -125,11 +129,15 @@ article {
 
 /* Section Hero  */
 
+#hero {
+  margin-top: 5rem;
+}
+
 #hero-wrapper {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-content: center;
-  align-items: start;
+  align-items: center;
   margin-top: 2rem;
   gap: 2rem;
 }
@@ -227,6 +235,10 @@ article {
   color: var(--darkGrayishBlue);
 }
 
+.owl-nav {
+  display: none;
+}
+
 /* Section  Testimonials  */
 
 #testimonials {
@@ -246,10 +258,10 @@ article {
 }
 
 #testimonial-row2 {
-  display: flex;
+  /* display: flex;
   align-items: center;
   justify-content: center;
-  padding-bottom: 4rem;
+  padding-bottom: 4rem; */
   /* grid-auto-flow: column; */
   /* grid-template-columns: repeat(4, 1fr); */
   /* gap: 2rem; */
@@ -316,6 +328,16 @@ article {
   left: 0;
   right: 0; */
   gap: 10px;
+}
+
+.owl-dot {
+  padding: 5px;
+  border-radius: 50%;
+  background-color: var(--darkGrayishBlue);
+}
+
+.owl-dot.active {
+  background-color: var(--brightRed);
 }
 
 /* .owl-stage-outer {
@@ -728,6 +750,23 @@ footer {
 
   .social-media {
     gap: 3rem;
+  }
+
+  #toggler {
+    display: block;
+    font-size: 1.5rem;
+  }
+
+  .navLinks ul {
+    position: fixed;
+    background-color: #ffa28a;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #9095a7;
+    top: -50%;
+    left: 35%;
+  }
+  .ri-close-line {
+    display: none;
   }
 }
 

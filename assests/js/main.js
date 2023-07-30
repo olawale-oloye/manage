@@ -36,3 +36,29 @@ $(".testimonial-carousel").owlCarousel({
     // },
   },
 });
+
+const openNav = document.querySelector(".ri-menu-2-fill");
+const closeNav = document.querySelector(".ri-close-line");
+const navList = document.querySelector(".navLinks ul");
+
+openNav.addEventListener("click", function () {
+  navList.style.top = "15%";
+  openNav.style.display = "none";
+  closeNav.style.display = "block";
+});
+
+function closeNavToggler() {
+  navList.style.top = "-50%";
+  openNav.style.display = "block";
+  closeNav.style.display = "none";
+}
+
+closeNav.addEventListener("click", function () {
+  closeNavToggler();
+});
+
+document.querySelectorAll("navLinks ul a").forEach((navLink) => {
+  navLink.addEventListener("click", function () {
+    closeNavToggler();
+  });
+});
