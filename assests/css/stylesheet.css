@@ -75,18 +75,18 @@ nav a:active {
   color: var(--veryDarkBlue);
 }
 
-.navLinks ul li {
+nav ul li {
   list-style: none;
 }
 
-.navLinks ul {
+nav ul {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 2rem;
 }
 
-.navLinks ul a {
+nav ul a {
   font-weight: 500;
   font-size: 0.9rem;
 }
@@ -231,7 +231,7 @@ article {
   font-size: 0.9rem;
   line-height: 1.5;
   padding-left: 4.7rem;
-  /* padding: 1.5rem 0; */
+  padding: 1.5rem 0;
   color: var(--darkGrayishBlue);
 }
 
@@ -279,24 +279,29 @@ article {
   /* z-index: 1; */
 }
 
-.testimonials-img img {
-  width: 20%;
-  position: absolute;
+/* .testimonial-items img {
+  width: 40%;
+
   top: -22%;
   right: 40%;
   z-index: 2;
+} */
+
+.owl-carousel .owl-item {
+  z-index: 99;
 }
 
 .owl-carousel .owl-item img {
-  width: 30%;
-  margin: 0 auto;
+  width: 40%;
+  margin: 0 auto -4rem;
+  z-index: 99;
 }
 
 .testimonials-txt {
   background-color: var(--darkBlue);
-  padding: 3rem 0 2rem;
+  padding: 3rem 0 3rem 0;
   border-radius: 10px;
-  margin-top: -5rem;
+  /* margin-top: -4rem; */
 }
 
 .testimonials-txt h5 {
@@ -599,7 +604,7 @@ footer {
     margin: 0 0.5rem;
   }
 
-  .navLinks ul {
+  nav ul {
     gap: 0.8rem;
   }
 
@@ -671,8 +676,19 @@ footer {
   nav {
     margin: 1rem 3rem;
   }
-  .navLinks {
-    display: none;
+  nav ul {
+    position: fixed;
+    background-color: #ffffff !important;
+    flex-direction: column;
+    width: 80%;
+    left: 0;
+    right: 0;
+    top: -50%;
+    margin: 0 auto;
+    box-shadow: 0 0 10px #ddd;
+    padding: 15px 0;
+    transform: translate(-50% -50%);
+    transition: 0.5s;
   }
 
   nav .btn-special-1 {
@@ -728,7 +744,7 @@ footer {
   }
 
   .bottom-wrapper {
-    margin: 1rem 3rem;
+    margin: 0 3rem;
     flex-direction: column;
     text-align: center;
   }
@@ -756,14 +772,6 @@ footer {
     font-size: 1.5rem;
   }
 
-  .navLinks ul {
-    position: fixed;
-    background-color: #ffa28a;
-    border-radius: 5px;
-    box-shadow: 0 0 10px #9095a7;
-    top: -50%;
-    left: 35%;
-  }
   .ri-close-line {
     display: none;
   }

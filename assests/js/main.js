@@ -39,7 +39,7 @@ $(".testimonial-carousel").owlCarousel({
 
 const openNav = document.querySelector(".ri-menu-2-fill");
 const closeNav = document.querySelector(".ri-close-line");
-const navList = document.querySelector(".navLinks ul");
+const navList = document.querySelector("nav ul");
 
 openNav.addEventListener("click", function () {
   navList.style.top = "15%";
@@ -57,7 +57,7 @@ closeNav.addEventListener("click", function () {
   closeNavToggler();
 });
 
-document.querySelectorAll("navLinks ul a").forEach((navLink) => {
+document.querySelectorAll("nav ul a").forEach((navLink) => {
   navLink.addEventListener("click", function () {
     closeNavToggler();
   });
