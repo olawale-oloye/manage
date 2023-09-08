@@ -62,3 +62,28 @@ document.querySelectorAll("nav ul a").forEach((navLink) => {
     closeNavToggler();
   });
 });
+
+const form = document.querySelector("form");
+const errorTxt = document.querySelector(".error-Txt");
+const formEmail = document.querySelector("formEmail");
+const emailRegEx =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|.(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+function alertInfo(alertTxt) {
+  errorTxt.textContent = alertTxt;
+  form.formEmail.value = "";
+}
+
+form.addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const emailValue = form.formEmail.value;
+
+  if (emailValue === "") {
+    alertInfo("Whoops, make sure it is an email");
+  } else if (!emailRegEx.test(emailValue)) {
+    alertInfo("Please, provide a valid email address");
+  } else {
+    alertInfo("You have succesffully subscribe for the weekly newsletter");
+  }
+});
